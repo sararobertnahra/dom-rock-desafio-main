@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: saranahra
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: domrock  
+    ports:
+      - "5432:5432"
