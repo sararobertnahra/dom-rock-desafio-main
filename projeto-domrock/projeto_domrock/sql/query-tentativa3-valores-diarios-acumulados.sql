@@ -25,6 +25,8 @@ SELECT A.item,
        SUM(A.lancamento_entrada_valor) as lancamento_entrada_valor,
        SUM(A.lancamento_saida_qtd)     as lancamento_saida_qtd,
        SUM(A.lancamento_saida_valor)   as lancamento_saida_valor,
+       0                               as saldo_inicial_qtd,
+       0.0                             as saldo_inicial_valor,
        0                               as saldo_parcial_qtd,
        0.0                             as saldo_parcial_valor
 FROM A
