@@ -1,8 +1,15 @@
 # dom-rock-desafio
 
-Para iniciar o desafio, foi criado um repositório no GitHub para armazenar os códigos desenvolvidos. O banco de dados utilizado no desafio foi o SQLAlchemy. Além disso, foram empregados o Docker e o Poetry para criar o ambiente de desenvolvimento (container).
+Para iniciar o desafio, foi criado um repositório no GitHub para armazenar os códigos desenvolvidos. O banco de dados utilizado no desafio foi o Postgres. Além disso, foram empregados o Docker e o Poetry para criar o ambiente de desenvolvimento (container). As principais bibliotecas utilizados foram: pandas e sqlalchemy.
 
-Para rodar o script foi utilizado o seguinte comando:
+Para executar a aplicação é necessário levantar o container do banco de dados.
+Na pasta contendo o docker-compose.yaml, digitar o seguinte comando:
+
+```Terminal
+docker compose up
+```
+
+Para rodar o script, acesse a pasta projeto-domrock, que contém o pyproject.toml e digite:
 ```Terminal
 poetry run dev
 ```
@@ -18,6 +25,4 @@ Estes relatórios contém:
 - Saldo inicial em valor, em formaro decimal,
 - Saldo final em quantidade, em formato decimal,
 - Saldo final em valor, em formaro decimal
-
-As bibliotecas utilizadas foram: numpy, pandas, datetime importando date, sqlalchemy importando engine e URL, sqlalchemy.types importnado String, Integer, Date e Float, sqlalchemy.orm importando DeclarativeBase, Mapped e mapped_column, sqlalchemy.sql importando text
 
