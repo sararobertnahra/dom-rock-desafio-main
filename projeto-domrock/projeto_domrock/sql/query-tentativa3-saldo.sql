@@ -1,1 +1,1 @@
-SELECT item FROM "Saldos"
+SELECT * FROM "Saldos"
