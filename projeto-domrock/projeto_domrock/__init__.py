@@ -63,7 +63,7 @@ def calcular_saldos_parciais(engine):
     dataframe_valores_diarios_acumulados.to_sql("SaldosParciais",engine, if_exists="replace")
 
 def exportar_relatorio(engine):
-    consulta_sql = open("C:/Users/saran/OneDrive/Desktop/Desafio Dom Rock/dom-rock-desafio-main/projeto-domrock/projeto_domrock/sql/query-tentativa2-saldo-final-anual.sql", "r").read()
+    consulta_sql = open("C:/Users/saran/OneDrive/Desktop/Desafio Dom Rock/dom-rock-desafio-main/projeto-domrock/projeto_domrock/sql/query-tentativa3-relatorio.sql", "r").read()
     dataframe = pandas.read_sql(consulta_sql,engine)
     dataframe.to_csv("C:/Users/saran/OneDrive/Desktop/Desafio Dom Rock/dom-rock-desafio-main/projeto-domrock/projeto_domrock/resultado/relatorio.csv")
     dataframe.to_excel("C:/Users/saran/OneDrive/Desktop/Desafio Dom Rock/dom-rock-desafio-main/projeto-domrock/projeto_domrock/resultado/relatorio.xlsx")
