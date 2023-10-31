@@ -65,8 +65,8 @@ def calcular_saldos_parciais(engine):
 def exportar_relatorio(engine):
     consulta_sql = open("C:/Users/saran/OneDrive/Desktop/Desafio Dom Rock/dom-rock-desafio-main/projeto-domrock/projeto_domrock/sql/query-tentativa3-relatorio.sql", "r").read()
     dataframe = pandas.read_sql(consulta_sql,engine)
-    dataframe.to_csv("C:/Users/saran/OneDrive/Desktop/Desafio Dom Rock/dom-rock-desafio-main/projeto-domrock/projeto_domrock/resultado/relatorio.csv")
-    dataframe.to_excel("C:/Users/saran/OneDrive/Desktop/Desafio Dom Rock/dom-rock-desafio-main/projeto-domrock/projeto_domrock/resultado/relatorio.xlsx")
+    caminho_csv = ("C:/Users/saran/OneDrive/Desktop/Desafio Dom Rock/dom-rock-desafio-main/projeto-domrock/projeto_domrock/resultado/relatorio.csv")
+    caminho_excel = ("C:/Users/saran/OneDrive/Desktop/Desafio Dom Rock/dom-rock-desafio-main/projeto-domrock/projeto_domrock/resultado/relatorio.xlsx")
     dataframe.to_csv(caminho_csv)
     dataframe.to_excel(caminho_excel)
     print(dataframe)
