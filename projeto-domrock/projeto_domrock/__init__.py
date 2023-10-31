@@ -37,7 +37,7 @@ def importar_saldos(engine):
     dataframe.to_sql("Saldos", engine, if_exists="replace")
     print(" -- saldos importados para o sql")
 
-def calcular_saldo(engine):
+def calcular_saldos_parciais(engine):
     consulta_saldo_sql = open("C:/Users/saran/OneDrive/Desktop/Desafio Dom Rock/dom-rock-desafio-main/projeto-domrock/projeto_domrock/sql/query-tentativa3-saldo.sql", "r").read()
     consulta_valores_diarios_acumulados_sql = open("C:/Users/saran/OneDrive/Desktop/Desafio Dom Rock/dom-rock-desafio-main/projeto-domrock/projeto_domrock/sql/query-tentativa3-valores-diarios-acumulados.sql", "r").read()
     dataframe_saldo = pandas.read_sql(consulta_saldo_sql, engine)
